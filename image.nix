@@ -7,6 +7,7 @@
     i18n.defaultLocale = "en_GB.UTF-8";
     networking.enableIntel2200BGFirmware = true;
     networking.firewall.enable = false;
+    nix.daemonCPUSchedPolicy = "idle";
     services.logrotate.enable = true;
     system.stateVersion = "22.11";
 }
