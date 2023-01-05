@@ -1,31 +1,19 @@
-On host system:
+# wonderbolt
 
-Install nix
+wonderbolt must be built inside NixOS. Unfortunately a nix-shell in some other OS isn't good enough.
 
-Create `/etc/nix/nix.conf` with:
+The host NixOS must be able to execute aarch64 binaries. Set in `/etc/nixos/configuration.nix`:
 
-```
-system-features = nixos-test benchmark big-parallel kvm
-```
-
-Run a `nix-shell` (configured in `shell.nix`):
-
-```bash
-nix-shell
+```nix
+boot.binfmt.emulatedSystems = [ "aarch64-linux" ];
 ```
 
-In the `nix-shell`, run:
+Flakes must be enabled in the host NixOS. Set in `/etc/nixos/configuration.nix`:
 
-```bash
-nixos-generate --format hyperv --configuration image.nix -o result
+```nix
+nix.extraOptions = ''
+  experimental-features = nix-command flakes
+'';
 ```
 
-Build output is symlinked to `result`.
-
-Copy the build output back to Windows (replacing `username`):
-
-```bash
- cp --sparse=never result/nixos-23.05pre439163.a4379d2b0de-x86_64-linux.vhdx /mnt/c/Users/username/
-```
-
-And run the image in Hyper-V
+To apply changes, run `sudo nixos-rebuild switch`.
