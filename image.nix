@@ -27,4 +27,12 @@
     systemd.enableEmergencyMode = false;
     time.timeZone = "Europe/London";
     users.mutableUsers = false;
+    users.users = {
+        dev = {
+            description = "Developer account";
+            extraGroups = [ "wheel" ];
+            isNormalUser = true;
+            password = "dev";
+        };
+    };
 }
