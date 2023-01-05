@@ -14,6 +14,7 @@
     nix.settings = {
         allow-dirty = false;
         auto-optimise-store = true;
+        keep-build-log = false;
     };
     services.logrotate.enable = true;
     system.stateVersion = "22.11";
