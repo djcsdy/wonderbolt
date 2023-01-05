@@ -9,6 +9,7 @@
     networking.firewall.enable = false;
     nix.daemonCPUSchedPolicy = "idle";
     nix.daemonIOSchedClass = "idle";
+    nix.gc.automatic = true;
     services.logrotate.enable = true;
     system.stateVersion = "22.11";
 }
