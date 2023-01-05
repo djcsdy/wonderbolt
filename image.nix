@@ -16,6 +16,7 @@
         auto-optimise-store = true;
         keep-build-log = false;
         keep-derivations = false;
+        preallocate-contents = true;
     };
     services.logrotate.enable = true;
     system.stateVersion = "22.11";
