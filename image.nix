@@ -18,6 +18,9 @@
         keep-derivations = false;
         preallocate-contents = true;
     };
+    nixpkgs.config = {
+        allowUnfree = true;
+    };
     services.logrotate.enable = true;
     system.stateVersion = "22.11";
 }
