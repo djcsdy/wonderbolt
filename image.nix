@@ -22,5 +22,6 @@
         allowUnfree = true;
     };
     services.logrotate.enable = true;
+    system.nixos.label = "wonderbolt";
     system.stateVersion = "22.11";
 }
