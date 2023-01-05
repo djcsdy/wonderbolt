@@ -4,6 +4,7 @@
     boot.kernelPackages = pkgs.linuxPackages_latest;
     boot.supportedFilesystems = lib.mkForce [ "vfat" "f2fs" "ntfs" ];
     boot.tmpOnTmpfs = true;
+    console.keyMap = "uk";
     i18n.defaultLocale = "en_GB.UTF-8";
     networking.enableIntel2200BGFirmware = true;
     networking.firewall.enable = false;
