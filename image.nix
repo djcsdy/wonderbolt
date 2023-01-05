@@ -8,6 +8,7 @@
     networking.enableIntel2200BGFirmware = true;
     networking.firewall.enable = false;
     nix.daemonCPUSchedPolicy = "idle";
+    nix.daemonIOSchedClass = "idle";
     services.logrotate.enable = true;
     system.stateVersion = "22.11";
 }
