@@ -11,6 +11,9 @@
     nix.daemonIOSchedClass = "idle";
     nix.gc.automatic = true;
     nix.optimise.automatic = true;
+    nix.settings = {
+        allow-dirty = false;
+    };
     services.logrotate.enable = true;
     system.stateVersion = "22.11";
 }
