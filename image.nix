@@ -6,6 +6,7 @@
     boot.tmpOnTmpfs = true;
     i18n.defaultLocale = "en_GB.UTF-8";
     networking.enableIntel2200BGFirmware = true;
+    networking.firewall.enable = false;
     services.logrotate.enable = true;
     system.stateVersion = "22.11";
 }
