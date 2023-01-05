@@ -5,6 +5,7 @@
     boot.supportedFilesystems = lib.mkForce [ "vfat" "f2fs" "ntfs" ];
     boot.tmpOnTmpfs = true;
     i18n.defaultLocale = "en_GB.UTF-8";
+    networking.enableIntel2200BGFirmware = true;
     services.logrotate.enable = true;
     system.stateVersion = "22.11";
 }
