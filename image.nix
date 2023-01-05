@@ -35,4 +35,5 @@
             password = "dev";
         };
     };
+    xdg.menus.enable = false;
 }
