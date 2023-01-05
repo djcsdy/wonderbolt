@@ -26,4 +26,5 @@
     system.stateVersion = "22.11";
     systemd.enableEmergencyMode = false;
     time.timeZone = "Europe/London";
+    users.mutableUsers = false;
 }
